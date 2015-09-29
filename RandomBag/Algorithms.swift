@@ -28,7 +28,7 @@ func randomShuffle<T>(inout array: [T]) {
     }
 }
 
-// MARK: GCD functions
+// GCD functions
 
 func gcd<T:UnsignedIntegerType>(var a: T, var b: T) -> T {
     var t: T = 0
@@ -64,6 +64,8 @@ func invertDict<T, U:UnsignedIntegerType>(dict: [T: U]) -> ([(U, T)], U) {
     return (vals, sum)
 }
 
+// weighted random functions
+
 func randomWeightedPick<T, U:UnsignedIntegerType>(dict: [T: U]) -> T? {
     let (vals, total) = invertDict(dict)
     var res: T? = nil
@@ -84,8 +86,6 @@ func randomWeightedPick<T, U:UnsignedIntegerType>(dict: [T: U]) -> T? {
     
     return res
 }
-
-// MARK: weighted random functions
 
 func randomWeightedShuffe<T, U:UnsignedIntegerType>(dict: [T: U]) -> [T] {
     var (vals, total) = invertDict(dict)

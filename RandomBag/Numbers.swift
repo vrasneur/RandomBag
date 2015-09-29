@@ -9,7 +9,7 @@
 import Foundation
 import Security
 
-// MARK: CSPRNG wrapper functions
+// CSPRNG wrapper functions
 
 func randomUniform<T:UnsignedIntegerType>(upper_bound: T) -> T {
     var r: T = 0
@@ -96,11 +96,7 @@ class RandomBitSequence<T:UnsignedIntegerType>: SequenceType {
                 gen = false
             }
             
-            //print("r: \(r)")
-            //print("bitIdx: \(bitIdx)")
-            
             let bit: Bit = ((r.toUIntMax() >> bitIdx) & 1) == 1 ? Bit.One : Bit.Zero
-            //print("bit: \(bit)")
             
             if bitIdx == 0 {
                 gen = true
