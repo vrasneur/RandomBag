@@ -77,6 +77,7 @@ class RandomTests: XCTestCase {
         XCTAssertEqualWithAccuracy(test.pVal, 0.527089, accuracy: 0.000001)
     }
     
+    /*
     func testMonobit() {
         let nb = 50000000
         var count = 0
@@ -98,5 +99,36 @@ class RandomTests: XCTestCase {
         let sobs = Double(count) / sqrt(Double(nb * 8 * sizeof(UInt64)))
         let pval = erfc(fabs(sobs) / sqrt(2.0))
         print(pval)
+    }
+    */
+    
+    func testBlockFrequency1() {
+        let epsilon = "1100100100001111110110101010001000100001011010001100001000110100110001001100011001100010100010111000"
+        
+        let test = BlockFrequencyTest(withBlockSize: 10)
+        for bit in StringBitSequence(str: epsilon) {
+            test.processBit(bit)
+        }
+        
+        XCTAssertEqual(test.n, 100)
+        XCTAssertEqual(test.blockSize, 10)
+        XCTAssertEqual(test.blockCount, 10)
+        XCTAssertEqualWithAccuracy(test.chiSquared, 7.2, accuracy: 0.1)
+        XCTAssertEqualWithAccuracy(test.pVal, 0.706438, accuracy: 0.000001)
+    }
+    
+    func testBlockFrequency2() {
+        let epsilon = "0110011010"
+        
+        let test = BlockFrequencyTest(withBlockSize: 3)
+        for bit in StringBitSequence(str: epsilon) {
+            test.processBit(bit)
+        }
+        
+        XCTAssertEqual(test.n, 10)
+        XCTAssertEqual(test.blockSize, 3)
+        XCTAssertEqual(test.blockCount, 3)
+        XCTAssertEqualWithAccuracy(test.chiSquared, 1.0, accuracy: 0.1)
+        XCTAssertEqualWithAccuracy(test.pVal, 0.801252, accuracy: 0.000001)
     }
 }

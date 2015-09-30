@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BFEE28991BBAA6FD00CA409B /* RandomBag.h in Headers */ = {isa = PBXBuildFile; fileRef = BFEE28981BBAA6FD00CA409B /* RandomBag.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF8A17251BBC543C00421374 /* cephes.c in Sources */ = {isa = PBXBuildFile; fileRef = BF8A17241BBC543C00421374 /* cephes.c */; settings = {ASSET_TAGS = (); }; };
+		BF8A17271BBC545B00421374 /* cephes.h in Headers */ = {isa = PBXBuildFile; fileRef = BF8A17261BBC545B00421374 /* cephes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF8A172D1BBC5B5800421374 /* RandomBag.h in Headers */ = {isa = PBXBuildFile; fileRef = BF8A172C1BBC5B5800421374 /* RandomBag.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BFEE28A01BBAA6FD00CA409B /* RandomBag.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEE28951BBAA6FD00CA409B /* RandomBag.framework */; settings = {ASSET_TAGS = (); }; };
 		BFEE28B11BBAA75000CA409B /* NISTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEE28AF1BBAA75000CA409B /* NISTTests.swift */; settings = {ASSET_TAGS = (); }; };
 		BFEE28B21BBAA75000CA409B /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEE28B01BBAA75000CA409B /* Numbers.swift */; settings = {ASSET_TAGS = (); }; };
@@ -27,14 +29,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF8A17241BBC543C00421374 /* cephes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cephes.c; sourceTree = "<group>"; };
+		BF8A17261BBC545B00421374 /* cephes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cephes.h; sourceTree = "<group>"; };
+		BF8A17291BBC56C400421374 /* RandomBagTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomBagTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF8A172C1BBC5B5800421374 /* RandomBag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomBag.h; sourceTree = "<group>"; };
 		BFEE28951BBAA6FD00CA409B /* RandomBag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomBag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BFEE28981BBAA6FD00CA409B /* RandomBag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RandomBag.h; sourceTree = "<group>"; };
 		BFEE289A1BBAA6FD00CA409B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFEE289F1BBAA6FD00CA409B /* RandomBagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomBagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE28A61BBAA6FD00CA409B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFEE28AF1BBAA75000CA409B /* NISTTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NISTTests.swift; sourceTree = "<group>"; };
 		BFEE28B01BBAA75000CA409B /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
-		BFEE28B31BBAA79400CA409B /* RandomBagTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomBagTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		BFEE28B41BBAA79400CA409B /* RandomBagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBagTests.swift; sourceTree = "<group>"; };
 		BFEE28B51BBAA79400CA409B /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		BFEE28B81BBAA7D300CA409B /* Algorithms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Algorithms.swift; sourceTree = "<group>"; };
@@ -81,10 +85,12 @@
 			isa = PBXGroup;
 			children = (
 				BFEE28AF1BBAA75000CA409B /* NISTTests.swift */,
+				BF8A17241BBC543C00421374 /* cephes.c */,
+				BF8A17261BBC545B00421374 /* cephes.h */,
 				BFEE28B01BBAA75000CA409B /* Numbers.swift */,
-				BFEE28981BBAA6FD00CA409B /* RandomBag.h */,
 				BFEE289A1BBAA6FD00CA409B /* Info.plist */,
 				BFEE28B81BBAA7D300CA409B /* Algorithms.swift */,
+				BF8A172C1BBC5B5800421374 /* RandomBag.h */,
 			);
 			path = RandomBag;
 			sourceTree = "<group>";
@@ -93,9 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				BFEE28B41BBAA79400CA409B /* RandomBagTests.swift */,
+				BF8A17291BBC56C400421374 /* RandomBagTests-Bridging-Header.h */,
 				BFEE28B51BBAA79400CA409B /* TestUtils.swift */,
 				BFEE28A61BBAA6FD00CA409B /* Info.plist */,
-				BFEE28B31BBAA79400CA409B /* RandomBagTests-Bridging-Header.h */,
 			);
 			path = RandomBagTests;
 			sourceTree = "<group>";
@@ -107,7 +113,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFEE28991BBAA6FD00CA409B /* RandomBag.h in Headers */,
+				BF8A172D1BBC5B5800421374 /* RandomBag.h in Headers */,
+				BF8A17271BBC545B00421374 /* cephes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFEE28B21BBAA75000CA409B /* Numbers.swift in Sources */,
+				BF8A17251BBC543C00421374 /* cephes.c in Sources */,
 				BFEE28B11BBAA75000CA409B /* NISTTests.swift in Sources */,
 				BFEE28B91BBAA7D300CA409B /* Algorithms.swift in Sources */,
 			);
@@ -334,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirandolabs.RandomBag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -354,6 +363,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirandolabs.RandomBag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -403,6 +413,7 @@
 				BFEE28AB1BBAA6FD00CA409B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFEE28AC1BBAA6FD00CA409B /* Build configuration list for PBXNativeTarget "RandomBagTests" */ = {
 			isa = XCConfigurationList;
@@ -411,6 +422,7 @@
 				BFEE28AE1BBAA6FD00CA409B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -43,3 +43,47 @@ class MonobitTest: StatTest {
         return erfc(fabs(self.sobs) / sqrt(2.0))
     }
 }
+
+class BlockFrequencyTest: StatTest {
+    var n: Int
+    var blockSize: Int
+    var blockCount: Int
+    var bitSum: Int
+    var bitCount: Int
+    var sum: Double
+    
+    init(withBlockSize blockSize: Int) {
+        self.n = 0
+        self.blockSize = blockSize
+        self.blockCount = 0
+        self.bitSum = 0
+        self.bitCount = 0
+        self.sum = 0.0
+    }
+    
+    func processBit(bit: Bit) {
+        self.n++
+        self.bitCount++
+        
+        if bit == Bit.One {
+            self.bitSum++
+        }
+        
+        if self.bitCount == self.blockSize {
+            let pi = Double(self.bitSum) / Double(self.blockSize)
+            self.sum += pow(pi - 0.5, 2.0)
+        
+            self.bitCount = 0
+            self.bitSum = 0
+            self.blockCount++
+        }
+    }
+    
+    var chiSquared: Double {
+        return 4.0 * Double(self.blockSize) * self.sum
+    }
+    
+    var pVal: Double {
+        return cephes_igamc(Double(self.blockCount) / 2.0, chiSquared / 2.0)
+    }
+}
