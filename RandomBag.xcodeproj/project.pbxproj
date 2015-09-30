@@ -33,6 +33,7 @@
 		BF8A17261BBC545B00421374 /* cephes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cephes.h; sourceTree = "<group>"; };
 		BF8A17291BBC56C400421374 /* RandomBagTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RandomBagTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF8A172C1BBC5B5800421374 /* RandomBag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomBag.h; sourceTree = "<group>"; };
+		BF8A172E1BBC839400421374 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BFEE28951BBAA6FD00CA409B /* RandomBag.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomBag.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFEE289A1BBAA6FD00CA409B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFEE289F1BBAA6FD00CA409B /* RandomBagTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RandomBagTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +67,7 @@
 		BFEE288B1BBAA6FD00CA409B = {
 			isa = PBXGroup;
 			children = (
+				BF8A172E1BBC839400421374 /* LICENSE */,
 				BFEE28971BBAA6FD00CA409B /* RandomBag */,
 				BFEE28A31BBAA6FD00CA409B /* RandomBagTests */,
 				BFEE28961BBAA6FD00CA409B /* Products */,
