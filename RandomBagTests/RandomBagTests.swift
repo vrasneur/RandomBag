@@ -131,4 +131,19 @@ class RandomTests: XCTestCase {
         XCTAssertEqualWithAccuracy(test.chiSquared, 1.0, accuracy: 0.1)
         XCTAssertEqualWithAccuracy(test.pVal, 0.801252, accuracy: 0.000001)
     }
+    
+    func testRuns1() {
+        let epsilon = "1100100100001111110110101010001000100001011010001100001000110100110001001100011001100010100010111000"
+        
+        let test = RunsTest()
+        for bit in StringBitSequence(str: epsilon) {
+            test.processBit(bit)
+        }
+        
+        XCTAssertEqual(test.n, 100)
+        XCTAssertEqualWithAccuracy(test.tau, 0.2, accuracy: 0.1)
+        XCTAssertEqualWithAccuracy(test.pi, 0.42, accuracy: 0.01)
+        XCTAssertEqual(test.vobs, 52)
+        XCTAssertEqualWithAccuracy(test.pVal, 0.500798, accuracy: 0.000001)
+    }
 }

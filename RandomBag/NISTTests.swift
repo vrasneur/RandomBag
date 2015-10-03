@@ -87,3 +87,52 @@ class BlockFrequencyTest: StatTest {
         return cephes_igamc(Double(self.blockCount) / 2.0, chiSquared / 2.0)
     }
 }
+
+class RunsTest: StatTest {
+    var n: Int
+    var sum: Int
+    var vobs: Int
+    var lastBit: Bit?
+    
+    init() {
+        self.n = 0
+        self.sum = 0
+        self.vobs = 1
+    }
+    
+    func processBit(bit: Bit) {
+        self.n++
+        
+        if bit == Bit.One {
+            self.sum++
+        }
+        
+        if (self.lastBit != nil) && (bit != self.lastBit) {
+            self.vobs++
+        }
+        
+        self.lastBit = bit
+    }
+    
+    var pi: Double {
+        return Double(self.sum) / Double(self.n)
+    }
+    
+    var tau: Double {
+        return 2.0 / sqrt(Double(self.n))
+    }
+    
+    var pVal: Double {
+        let pi = self.pi
+        
+        if fabs(pi - 0.5) > self.tau {
+            return 0.0
+        }
+        
+        let f = 2.0 * pi * (1.0 - pi)
+        let num = fabs(Double(self.vobs) - (Double(self.n) * f))
+        let den = sqrt(2.0 * Double(self.n)) * f
+        
+        return erfc(num / den)
+    }
+}
