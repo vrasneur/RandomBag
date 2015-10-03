@@ -3,26 +3,26 @@
 //  Random
 //
 //  Created by Vincent on 28/09/2015.
-//  Copyright © 2015 Mirandosoft. All rights reserved.
+//  Copyright © 2015 Mirandolabs. All rights reserved.
 //
 
 import Foundation
 
 class StringBitSequence: SequenceType {
-    let str: String
+    let bits: String
     
-    init(str: String) {
-        self.str = str
+    init(bits: String) {
+        self.bits = bits
     }
     
     func generate() -> AnyGenerator<Bit> {
-        var idx: String.Index = self.str.startIndex
+        var idx: String.Index = self.bits.startIndex
         
         return anyGenerator {
             var bit: Bit?
             
-            while (idx != self.str.endIndex) && (bit == nil) {
-                switch self.str[idx] {
+            while (idx != self.bits.endIndex) && (bit == nil) {
+                switch self.bits[idx] {
                 case "0":
                     bit = Bit.Zero
                 case "1":

@@ -3,7 +3,7 @@
 //  RandomTests
 //
 //  Created by Vincent on 26/09/2015.
-//  Copyright © 2015 Mirandosoft. All rights reserved.
+//  Copyright © 2015 Mirandolabs. All rights reserved.
 //
 
 import XCTest
@@ -53,7 +53,7 @@ class RandomTests: XCTestCase {
         let epsilon = "1100100100001111110110101010001000100001011010001100001000110100110001001100011001100010100010111000"
         
         let test = MonobitTest()
-        for bit in StringBitSequence(str: epsilon) {
+        for bit in StringBitSequence(bits: epsilon) {
             test.processBit(bit)
         }
         
@@ -67,7 +67,7 @@ class RandomTests: XCTestCase {
         let epsilon = "1011010101"
         
         let test = MonobitTest()
-        for bit in StringBitSequence(str: epsilon) {
+        for bit in StringBitSequence(bits: epsilon) {
             test.processBit(bit)
         }
         
@@ -106,7 +106,7 @@ class RandomTests: XCTestCase {
         let epsilon = "1100100100001111110110101010001000100001011010001100001000110100110001001100011001100010100010111000"
         
         let test = BlockFrequencyTest(withBlockSize: 10)
-        for bit in StringBitSequence(str: epsilon) {
+        for bit in StringBitSequence(bits: epsilon) {
             test.processBit(bit)
         }
         
@@ -121,7 +121,7 @@ class RandomTests: XCTestCase {
         let epsilon = "0110011010"
         
         let test = BlockFrequencyTest(withBlockSize: 3)
-        for bit in StringBitSequence(str: epsilon) {
+        for bit in StringBitSequence(bits: epsilon) {
             test.processBit(bit)
         }
         
@@ -136,7 +136,7 @@ class RandomTests: XCTestCase {
         let epsilon = "1100100100001111110110101010001000100001011010001100001000110100110001001100011001100010100010111000"
         
         let test = RunsTest()
-        for bit in StringBitSequence(str: epsilon) {
+        for bit in StringBitSequence(bits: epsilon) {
             test.processBit(bit)
         }
         

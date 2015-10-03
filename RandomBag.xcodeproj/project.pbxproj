@@ -40,8 +40,8 @@
 		BFEE28A61BBAA6FD00CA409B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFEE28AF1BBAA75000CA409B /* NISTTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NISTTests.swift; sourceTree = "<group>"; };
 		BFEE28B01BBAA75000CA409B /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
-		BFEE28B41BBAA79400CA409B /* RandomBagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomBagTests.swift; sourceTree = "<group>"; };
-		BFEE28B51BBAA79400CA409B /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		BFEE28B41BBAA79400CA409B /* RandomBagTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RandomBagTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BFEE28B51BBAA79400CA409B /* TestUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TestUtils.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BFEE28B81BBAA7D300CA409B /* Algorithms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Algorithms.swift; sourceTree = "<group>"; };
 		BFFCEA801BBFDC5D00051A81 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
